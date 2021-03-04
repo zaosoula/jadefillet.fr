@@ -1,0 +1,43 @@
+$gradient: linear-gradient(141.24deg, #607ADB 0.87%, rgba(46, 32, 135, 0.8) 60.25%, #7005A3 97.93%);
+$bubble-size: 50vh;
+
+// breakpoints
+$width-sm: 544px;
+$width-md: 768px;
+$width-lg: 1012px;
+$width-xl: 1280px;
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$width-sm}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$width-md}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$width-lg}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$width-xl}) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}

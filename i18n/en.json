@@ -1,0 +1,121 @@
+{
+  "home": {
+    "nav": "Home",
+    "title": {
+      "prefix": "Hi i'm ",
+      "main": "Jade Fillet",
+      "suffix": " a designer"
+    },
+    "image": {
+      "url": "/assets/images/jade-1.png",
+      "alt": "Jade Fillet"
+    },
+    "link": {
+      "url": "#aboutme",
+      "label": "Learn more about me"
+    }
+  },
+  "aboutme": {
+    "nav": "About me",
+    "image": {
+      "url": "/assets/images/jade-2.jpg",
+      "alt": "Jade Fillet"
+    },
+    "title": "WHO AM I ?",
+    "summary": "Very sociable, smiling, motivated and dynamic, I am passionate about graphics and design, I master Illustrator, InDesign, Photoshop and Lightroom. I also practice photography and special effects makeup in my spare time. After a BAC + 3 in Graphics and Design, I want to continue my studies on a 2-year master's degree specialized in artistic direction.",
+    "skills": [{
+        "icon": "#message",
+        "label": "Community Management"
+      },
+      {
+        "icon": "#shape",
+        "label": "Graphism"
+      }
+    ]
+  },
+  "projects": {
+    "nav": "Projects",
+    "title": "Projects",
+    "items": [{
+      "url": "",
+      "title": "michel pastoureau",
+      "image": {
+        "url": "/assets/images/projects/1.png",
+        "alt": ""
+      }
+    }, 
+    {
+      "url": "",
+      "title": "Atypical",
+      "image": {
+        "url": "/assets/images/projects/436.png",
+        "alt": ""
+      }
+    }, 
+    {
+      "url": "",
+      "title": "Abbé Pierre",
+      "image": {
+        "url": "/assets/images/projects/19250225.png",
+        "alt": ""
+      }
+    }, 
+    {
+      "url": "",
+      "title": "Projet Omega",
+      "image": {
+        "url": "/assets/images/projects/Capture d’écran 2020-11-16 092025.jpg",
+        "alt": ""
+      }
+    }, 
+    {
+      "url": "",
+      "title": "AEROCAP",
+      "image": {
+        "url": "/assets/images/projects/Carte de visite mockup.png",
+        "alt": ""
+      }
+    }, 
+    {
+      "url": "",
+      "title": "Hectare",
+      "image": {
+        "url": "/assets/images/projects/mockup brochure.png",
+        "alt": ""
+      }
+    }, 
+    {
+      "url": "",
+      "title": "Livre monstre",
+      "image": {
+        "url": "/assets/images/projects/mockup.png",
+        "alt": ""
+      }
+    }, 
+    {
+      "url": "",
+      "title": "Simpsons 7 Familles",
+      "image": {
+        "url": "/assets/images/projects/packaging simpson.jpg",
+        "alt": ""
+      }
+    }, 
+    {
+      "url": "",
+      "title": "Pochette 1",
+      "image": {
+        "url": "/assets/images/projects/Pochette 1.png",
+        "alt": ""
+      }
+    }, 
+    {
+      "url": "",
+      "title": "pochette d'album laulau",
+      "image": {
+        "url": "/assets/images/projects/pochette d'album laulau.png",
+        "alt": ""
+      }
+    }
+  ]
+  }
+}
