@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "cookie-parser": "1.4.5",
     "eta": "1.12.1",
