@@ -1,0 +1,11 @@
+---
+application:
+  name: "jadefillet-fr"
+  project: "jadefillet.fr"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-jadefillet-fr"
+  routes:
+  - application_name: "jadefillet-fr"
+    paths:
+    - "/*"
