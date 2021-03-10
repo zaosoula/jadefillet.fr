@@ -74,7 +74,7 @@ header {
     transition: background-color .3s, backdrop-filter .3s, border-color .3s;
 
     @include sm {
-      display: none;
+      // display: none;
     }
 
     &.scrolled {
@@ -122,6 +122,28 @@ header {
           top: 0;
           transform: translateY(+50%);
         }
+      }
+
+      @include sm {
+        gap: 5vw;
+        font-size: .7em;
+
+        li {
+          &.logo {
+            left: 1em;
+            height: 20px;
+            width: 20px;
+            transform: translateY(+100%);
+
+          }
+
+          &.lang-selector {
+            right: 1em;
+            transform: translateY(+100%);
+
+          }
+        }
+
       }
     }
   }
@@ -289,7 +311,7 @@ main {
       }
     }
 
-    &.aboutme {
+    &#aboutme {
       padding-top: 2em;
       padding-bottom: 2em;
       display: grid;
@@ -322,6 +344,10 @@ main {
           text-transform: uppercase;
         }
 
+        h3 {
+          font-size: 1.5em;
+        }
+
         p {
           text-align: justify;
         }
@@ -339,12 +365,14 @@ main {
           }
         }
 
-        .services-list {
+        .services-list,
+        .socials-list {
           display: flex;
           width: 100%;
           flex-wrap: wrap;
 
-          .service {
+          .service,
+          .social {
             background-color: rgba(255, 255, 255, .13);
             backdrop-filter: blur(10px);
             border-color: 1px solid rgba(255, 255, 255, .3);
@@ -355,12 +383,27 @@ main {
             margin-right: .5em;
             margin-bottom: 1em;
 
-
             svg {
               height: 1.3em;
               vertical-align: middle;
               width: auto;
               margin-right: .5em;
+            }
+
+            &.social {
+              padding: 1em;
+              margin-top: 0;
+
+              &:hover {
+                svg {
+                  transform: scale(1.1);
+                }
+              }
+
+              svg {
+                margin: 0;
+                transition: transform .3s ease-in-out;
+              }
             }
           }
         }
@@ -448,28 +491,44 @@ main {
 
       min-height: unset;
       display: grid;
-      grid-template-columns: 75%;
       justify-content: center;
+      grid-template-columns: 70vw;
+
+      @include xl {
+        grid-template-columns: 80vw;
+      }
+
+      @include lg {
+        grid-template-columns: 85vw;
+      }
 
       &#project-header {
         position: relative;
-        padding-top: 80px;
+        padding-top: 150px;
         min-height: 75vh;
         place-content: center;
         z-index: 3;
+        margin-bottom: 3em;
 
         div {
           place-self: center;
 
+          @include lg {
+            place-self: unset;
+          }
+
           h1 {
-            font-size: 5vw;
-            line-height: 6vw;
+            font-size: 4em;
             font-weight: normal;
             margin: 0;
           }
 
           h2 {
             margin-bottom: 3em;
+
+            @include lg {
+              margin-bottom: 1em;
+            }
           }
         }
 

@@ -76,12 +76,6 @@ header nav {
   z-index: 100;
 }
 
-@media (max-width: 544px) {
-  header nav {
-    display: none;
-  }
-}
-
 header nav.scrolled {
   background-color: rgba(255, 255, 255, 0.13);
   -webkit-backdrop-filter: blur(10px);
@@ -131,6 +125,25 @@ header nav ul li.lang-selector {
   top: 0;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
+}
+
+@media (max-width: 544px) {
+  header nav ul {
+    gap: 5vw;
+    font-size: .7em;
+  }
+  header nav ul li.logo {
+    left: 1em;
+    height: 20px;
+    width: 20px;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  header nav ul li.lang-selector {
+    right: 1em;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
 }
 
 main {
@@ -313,7 +326,7 @@ main section#home > div:nth-child(2) .bubble:nth-child(2) {
           animation-delay: 3s;
 }
 
-main section.aboutme {
+main section#aboutme {
   padding-top: 2em;
   padding-bottom: 2em;
   display: -ms-grid;
@@ -324,26 +337,26 @@ main section.aboutme {
 }
 
 @media (max-width: 768px) {
-  main section.aboutme {
+  main section#aboutme {
     min-height: auto;
   }
 }
 
 @media (max-width: 1280px) {
-  main section.aboutme {
+  main section#aboutme {
     -ms-grid-columns: 80vw;
         grid-template-columns: 80vw;
   }
 }
 
 @media (max-width: 1012px) {
-  main section.aboutme {
+  main section#aboutme {
     -ms-grid-columns: 85vw;
         grid-template-columns: 85vw;
   }
 }
 
-main section.aboutme > div {
+main section#aboutme > div {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
@@ -352,39 +365,44 @@ main section.aboutme > div {
 }
 
 @media (max-width: 768px) {
-  main section.aboutme > div {
+  main section#aboutme > div {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
 }
 
-main section.aboutme > div h2 {
+main section#aboutme > div h2 {
   font-size: 3em;
   text-transform: uppercase;
 }
 
-main section.aboutme > div p {
+main section#aboutme > div h3 {
+  font-size: 1.5em;
+}
+
+main section#aboutme > div p {
   text-align: justify;
 }
 
-main section.aboutme > div img {
+main section#aboutme > div img {
   height: 90vh;
   max-height: 500px;
 }
 
 @media (max-width: 1280px) {
-  main section.aboutme > div img {
+  main section#aboutme > div img {
     height: 50vh;
   }
 }
 
 @media (max-width: 768px) {
-  main section.aboutme > div img {
+  main section#aboutme > div img {
     display: none;
   }
 }
 
-main section.aboutme > div .services-list {
+main section#aboutme > div .services-list,
+main section#aboutme > div .socials-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,7 +411,10 @@ main section.aboutme > div .services-list {
       flex-wrap: wrap;
 }
 
-main section.aboutme > div .services-list .service {
+main section#aboutme > div .services-list .service,
+main section#aboutme > div .services-list .social,
+main section#aboutme > div .socials-list .service,
+main section#aboutme > div .socials-list .social {
   background-color: rgba(255, 255, 255, 0.13);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -405,11 +426,41 @@ main section.aboutme > div .services-list .service {
   margin-bottom: 1em;
 }
 
-main section.aboutme > div .services-list .service svg {
+main section#aboutme > div .services-list .service svg,
+main section#aboutme > div .services-list .social svg,
+main section#aboutme > div .socials-list .service svg,
+main section#aboutme > div .socials-list .social svg {
   height: 1.3em;
   vertical-align: middle;
   width: auto;
   margin-right: .5em;
+}
+
+main section#aboutme > div .services-list .service.social,
+main section#aboutme > div .services-list .social.social,
+main section#aboutme > div .socials-list .service.social,
+main section#aboutme > div .socials-list .social.social {
+  padding: 1em;
+  margin-top: 0;
+}
+
+main section#aboutme > div .services-list .service.social:hover svg,
+main section#aboutme > div .services-list .social.social:hover svg,
+main section#aboutme > div .socials-list .service.social:hover svg,
+main section#aboutme > div .socials-list .social.social:hover svg {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main section#aboutme > div .services-list .service.social svg,
+main section#aboutme > div .services-list .social.social svg,
+main section#aboutme > div .socials-list .service.social svg,
+main section#aboutme > div .socials-list .social.social svg {
+  margin: 0;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
 main section#projects {
@@ -498,34 +549,60 @@ main.project section {
   min-height: unset;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 75%;
-      grid-template-columns: 75%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-grid-columns: 70vw;
+      grid-template-columns: 70vw;
+}
+
+@media (max-width: 1280px) {
+  main.project section {
+    -ms-grid-columns: 80vw;
+        grid-template-columns: 80vw;
+  }
+}
+
+@media (max-width: 1012px) {
+  main.project section {
+    -ms-grid-columns: 85vw;
+        grid-template-columns: 85vw;
+  }
 }
 
 main.project section#project-header {
   position: relative;
-  padding-top: 80px;
+  padding-top: 150px;
   min-height: 75vh;
   place-content: center;
   z-index: 3;
+  margin-bottom: 3em;
 }
 
 main.project section#project-header div {
   place-self: center;
 }
 
+@media (max-width: 1012px) {
+  main.project section#project-header div {
+    place-self: unset;
+  }
+}
+
 main.project section#project-header div h1 {
-  font-size: 5vw;
-  line-height: 6vw;
+  font-size: 4em;
   font-weight: normal;
   margin: 0;
 }
 
 main.project section#project-header div h2 {
   margin-bottom: 3em;
+}
+
+@media (max-width: 1012px) {
+  main.project section#project-header div h2 {
+    margin-bottom: 1em;
+  }
 }
 
 main.project section#project-header p {

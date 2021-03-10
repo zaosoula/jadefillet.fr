@@ -49,6 +49,17 @@
             </div>
             {{= }) }}
           </div>
+          
+          <h3>{{ _('aboutme.social') }}</h3>
+          <div class="socials-list">
+            {{= _('aboutme.socials').forEach(function (i){ }}
+            <a class="social" href="{{i.url}}" target="_blank" title="{{i.label}}">
+              <svg viewBox="0 0 24 24">
+                <use href="{{i.icon}}"></use>
+              </svg>
+            </a>
+            {{= }) }}
+          </div>
         </div>
       </div>
     </section>

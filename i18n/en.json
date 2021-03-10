@@ -31,7 +31,19 @@
         "icon": "#shape",
         "label": "Graphism"
       }
-    ]
+    ],
+    "social": "Connect with me",
+    "socials": [{
+      "icon": "#instagram",
+      "url": "Community Management",
+      "label": "Instagram"
+    },
+    {
+      "icon": "#linkedin",
+      "url": "https://www.linkedin.com/in/jade-fillet-b0a496194/",
+      "label": "Linkedin"
+    }
+  ]
   },
   "projects": {
     "nav": "Projects",

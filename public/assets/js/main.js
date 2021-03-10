@@ -41,6 +41,20 @@
         })
       }
     }
+
+
+    document.querySelectorAll('[data-target="#aboutme"]').forEach((link) => {
+      link.addEventListener('click', () => {
+        bubbles.forEach((bubble) => {
+          bubble.addEventListener("animationend", function () {
+            bubble.classList.remove('slidingout');
+          }, {
+            once: true
+          });
+          bubble.classList.add('slidingout');
+        })
+      })
+    })
   }
 
    /*
@@ -77,19 +91,6 @@
     })
   });
 
-  document.querySelectorAll('[data-target="#aboutme"]').forEach((link) => {
-    link.addEventListener('click', () => {
-      bubbles.forEach((bubble) => {
-        bubble.addEventListener("animationend", function () {
-          bubble.classList.remove('slidingout');
-        }, {
-          once: true
-        });
-        bubble.classList.add('slidingout');
-      })
-    })
-  })
-
   /*
    *  MASONRY GRID
    */
@@ -98,13 +99,16 @@
   if (grids.length && getComputedStyle(grids[0]).gridTemplateRows !== 'masonry') {
     grids = grids.map(grid => ({
       _el: grid,
-      gap: parseFloat(getComputedStyle(grid).gridRowGap),
-      items: [...grid.childNodes].filter(c => c.nodeType === 1),
+      gap: 0,
+      items: [],
       ncol: 0
     }));
 
     function layout() {
       grids.forEach(grid => {
+
+        grid.gap = parseFloat(getComputedStyle(grid._el).gridRowGap)
+        grid.items = [...grid._el.childNodes].filter(c => c.nodeType === 1)
 
 
         /* get the post relayout number of columns */
@@ -130,6 +134,8 @@
         }
       })
     }
+
+    layout();
 
     addEventListener('load', e => {
       layout(); /* initial load */
