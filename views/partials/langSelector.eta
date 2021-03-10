@@ -1,0 +1,13 @@
+{{= 
+  if(_('_currentLang') == 'en') { 
+    otherLang = 'fr';
+  } else if(_('_currentLang') == 'fr') { 
+    otherLang = 'en';
+  }
+}}
+
+<a href="?lang={{ otherLang }}" rel="alternate">
+    <svg viewBox="0 0 512 512" height="1em">
+      <use href="#{{ otherLang }}"></use>
+    </svg>
+</a>

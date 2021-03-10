@@ -34,14 +34,13 @@ class i18n {
       let translation = null;
       try {
         translation = key.split('.').reduce((parent,subPath, deepness)=>{
-          if(deepness==1) return root[parent][subPath];
-          return parent[subPath];
+          if(deepness==1) return root?.[parent]?.[subPath];
+          return parent?.[subPath];
         })
       } catch (error) {
         console.log(error);
       } 
 
-      console.log(key, translation);
 
       if((translation===null || translation===undefined)  && langName != this.config.defaultLang) return this.translate(key, this.config.defaultLang);
       return translation || '';

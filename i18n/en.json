@@ -37,10 +37,10 @@
     "nav": "Projects",
     "title": "Projects",
     "items": [{
-      "url": "",
+      "slug": "michel-pastoureau",
       "title": "michel pastoureau",
       "image": {
-        "url": "/assets/images/projects/1.png",
+        "url": "/assets/images/projects/1.jpg",
         "alt": ""
       }
     }, 
@@ -48,7 +48,7 @@
       "url": "",
       "title": "Atypical",
       "image": {
-        "url": "/assets/images/projects/436.png",
+        "url": "/assets/images/projects/436.jpg",
         "alt": ""
       }
     }, 
@@ -56,7 +56,7 @@
       "url": "",
       "title": "Abbé Pierre",
       "image": {
-        "url": "/assets/images/projects/19250225.png",
+        "url": "/assets/images/projects/19250225.jpg",
         "alt": ""
       }
     }, 
@@ -72,7 +72,7 @@
       "url": "",
       "title": "AEROCAP",
       "image": {
-        "url": "/assets/images/projects/Carte de visite mockup.png",
+        "url": "/assets/images/projects/Carte de visite mockup.jpg",
         "alt": ""
       }
     }, 
@@ -80,7 +80,7 @@
       "url": "",
       "title": "Hectare",
       "image": {
-        "url": "/assets/images/projects/mockup brochure.png",
+        "url": "/assets/images/projects/mockup brochure.jpg",
         "alt": ""
       }
     }, 
@@ -88,7 +88,7 @@
       "url": "",
       "title": "Livre monstre",
       "image": {
-        "url": "/assets/images/projects/mockup.png",
+        "url": "/assets/images/projects/mockup.jpg",
         "alt": ""
       }
     }, 
@@ -104,7 +104,7 @@
       "url": "",
       "title": "Pochette 1",
       "image": {
-        "url": "/assets/images/projects/Pochette 1.png",
+        "url": "/assets/images/projects/Pochette 1.jpg",
         "alt": ""
       }
     }, 
@@ -112,10 +112,36 @@
       "url": "",
       "title": "pochette d'album laulau",
       "image": {
-        "url": "/assets/images/projects/pochette d'album laulau.png",
+        "url": "/assets/images/projects/pochette d'album laulau.jpg",
         "alt": ""
       }
     }
   ]
+  },
+  "projects_page": {
+    "michel-pastoureau": {
+      "title": "Michel Pastourau",
+      "subtitle": "Design de livre",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae malesuada orci, sit amet tristique nisi. Vivamus in nulla nibh. Vivamus non nisi neque. Phasellus mollis in mi ut interdum. Phasellus sit amet massa ac augue scelerisque dignissim. Nam mollis non velit quis venenatis. Nullam sit amet est a nisi faucibus mattis eget nec leo. Suspendisse ut nunc laoreet, blandit dui sed, facilisis turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In auctor urna at mi convallis, sed malesuada massa eleifend. Vestibulum eros ipsum, commodo nec lacus vel, imperdiet lacinia ipsum. Vivamus sit amet sem viverra, efficitur magna et, faucibus lacus. Praesent et dui erat. Pellentesque in magna eget nisl dignissim rutrum fermentum non urna. Praesent aliquam venenatis imperdiet. Nunc sollicitudin tempus metus, id porttitor purus vehicula at. Curabitur lacinia justo lectus, eu venenatis dolor semper non. Sed commodo orci nec purus egestas, quis venenatis erat ullamcorper. Quisque erat felis, egestas quis est faucibus, pulvinar suscipit ex. Morbi consequat, lorem eget mattis eleifend, elit justo volutpat mi, accumsan tempor elit leo in eros. Vivamus facilisis odio eu arcu placerat, sed lobortis erat vestibulum. Phasellus eu laoreet tortor. Praesent condimentum vulputate quam, eu feugiat metus interdum vitae. Curabitur bibendum rutrum nunc sit amet maximus.",
+      "images": [
+        {
+          "url": "/assets/images/projects/michel-pastoureau/1.png",
+          "alt": ""
+        },{
+          "url": "/assets/images/projects/michel-pastoureau/2.png",
+          "alt": ""
+        },{
+          "url": "/assets/images/projects/michel-pastoureau/1.png",
+          "alt": ""
+        }
+      ]
+    }
+  },
+  "404": {
+    "title": "Page not found",
+    "link": {
+      "url": "/",
+      "label": "Back to home"
+    }
   }
 }

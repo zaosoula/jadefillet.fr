@@ -1,0 +1,21 @@
+<header>
+    <nav>
+      <ul>
+      <li class="logo">
+        JF
+      </li>
+      {{=  if(page == 'home') { }}
+        <li data-target="#home"><span>{{ _('home.nav') }}</span></li>
+        <li data-target="#aboutme"><span>{{ _('aboutme.nav') }}</span></li>
+        <li data-target="#projects"><span>{{ _('projects.nav') }}</span></li>
+      {{= } else { }}
+        <li><a href="/"><span>{{ _('home.nav') }}</span></a></li>
+        <li><a href="/#aboutme"><span>{{ _('aboutme.nav') }}</span></a></li>
+        <li><a href="/#projects"><span>{{ _('projects.nav') }}</span></a></li>
+      {{= } }}
+        <li class="lang-selector">
+          {{% includeFile("partials/langSelector", { _:_}) }}
+        </li>
+      </ul>
+    </nav>
+  </header>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ _('_currentLang') }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jade Fillet | Designer</title>
+  <link href="/assets/css/sanitize.css" rel="stylesheet" />
+  <link href="/assets/css/main.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  {{% includeFile("partials/header", { _:_, page: "404"}) }}
+  <main class="notfound">
+    <section id="home">
+      <div>
+        <h1>
+          {{ _('404.title') }}</h1>
+        <a href="{{ _('404.link.url') }}">
+          <svg viewBox="0 0 24 24">
+            <use href="#arrow-down"></use>
+          </svg>
+          <span>{{ _('404.link.label') }}</span>
+        </a>
+        <!-- <button>hire me</button> -->
+      </div>
+      <div class="parallax">
+        <div class="bubble" data-depth=".7"></div>
+        <div class="bubble" data-depth=".1"></div>
+        <img class="jade" src="{{ _('home.image.url') }}" alt="{{ _('home.image.alt') }}" loading="eager">
+      </div>
+    </section>
+  </main>
+
+
+
+  <script src="/assets/js/parallax.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
+
+  {{% includeFile("partials/icons", { _:_}) }}
+
+</body>
+
+</html>

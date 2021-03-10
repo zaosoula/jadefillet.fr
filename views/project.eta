@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ _('_currentLang') }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jade Fillet | Designer</title>
+  <link href="/assets/css/sanitize.css" rel="stylesheet" />
+  <link href="/assets/css/main.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  {{% includeFile("partials/header", { _:_, page: "project"}) }}
+  <main class="project">
+    <section id="project-header">
+    <div>
+      <h1>
+        {{ _p('title') }}
+      </h1>
+      <h2>
+        {{ _p('subtitle') }}
+      </h2>
+      </div>
+      <p>
+        {{% _p('description') }}
+      </p>
+    </section>
+    <section id="description">
+
+    </section>
+    <section id="images">
+      <div class="images-list grid--masonry">
+        {{= _p('images').forEach(function (i){ }}
+        <div class="project">
+          <img src="{{ i.url }}" loading="lazy">
+          </a>
+        </div>
+        {{= }) }}
+      </div>
+    </section>
+
+    {{% includeFile("partials/footer", { _:_}) }}
+
+  </main>
+
+
+
+  <script src="/assets/js/parallax.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
+
+  {{% includeFile("partials/icons", { _:_}) }}
+
+</body>
+
+</html>

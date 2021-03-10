@@ -1,0 +1,15 @@
+  <footer>
+      <span>
+        <svg viewBox="0 0 24 24" height="1em">
+          <use href="#copyright"></use>
+        </svg>
+        {{ new Date().getFullYear() }} Jade Fillet
+      </span>
+      <a href="https://zaosoula.fr" target="_blank">
+        Made with
+        <svg viewBox="0 0 24 24" height="1em">
+          <use href="#heart"></use>
+        </svg>
+        by Zao Soula
+      </a>
+    </footer>

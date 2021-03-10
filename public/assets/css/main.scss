@@ -96,6 +96,32 @@ header {
       li {
         cursor: pointer;
         margin: 0;
+
+        &.logo {
+          position: absolute;
+          left: 1.7em;
+          top: 0;
+          transform: translateY(+50%);
+          border-radius: 100%;
+          background-color: #cfa491;
+          height: 30px;
+          width: 30px;
+          font-size: 0.7em;
+          display: grid;
+          place-content: center;
+          cursor: default;
+
+          &::before {
+            content: "";
+          }
+        }
+
+        &.lang-selector {
+          position: absolute;
+          right: 1.7em;
+          top: 0;
+          transform: translateY(+50%);
+        }
       }
     }
   }
@@ -106,6 +132,411 @@ main {
   background-size: 100vw 100vh;
   background-attachment: fixed;
   color: white;
+
+  section {
+
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0 100px;
+    overflow: hidden;
+
+
+    overflow-x: auto;
+
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    @include md {
+      padding: 0 50px;
+    }
+
+    &#home {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      @include md {
+        grid-template-columns: 1fr;
+      }
+
+      >div:nth-child(1) {
+
+        place-self: center;
+        z-index: 3;
+
+        h1 {
+          font-size: 5vw;
+          line-height: 6vw;
+          font-weight: normal;
+          margin: 0;
+          margin-bottom: 1em;
+
+          strong {
+            display: block;
+            font-weight: normal;
+            white-space: nowrap;
+          }
+        }
+
+        @include md {
+          place-self: unset;
+          padding-top: 6em;
+
+          h1 {
+            font-size: 45px;
+            line-height: 55px;
+            // max-width: 380px;
+
+            strong {
+              display: unset;
+            }
+          }
+        }
+
+        button {
+          border: 0;
+          padding: .2em 1.2em;
+          margin-top: 1em;
+          font-size: 36px;
+          color: white;
+          text-transform: capitalize;
+          cursor: pointer;
+          background: rgba(212, 184, 173, 0.55);
+          box-shadow: inset 11.7px -11.7px 11.7px rgba(161, 140, 131, 0.143), inset -11.7px 11.7px 11.7px rgba(255, 255, 255, 0.143);
+          backdrop-filter: blur(67.626px);
+          border-radius: 15px;
+          transition: background .2s;
+
+          &:hover {
+            background: rgba(212, 184, 173, .8);
+          }
+
+          @include sm {
+            display: none;
+          }
+        }
+      }
+
+      >div:nth-child(2) {
+        position: relative;
+
+        @include sm {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          display: grid;
+          place-content: center;
+        }
+
+        .jade {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          max-height: 60vh;
+          z-index: 2;
+          filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.5));
+
+          @include md {
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            max-width: 90vw;
+            // height: auto;
+          }
+        }
+
+        .bubble {
+          position: absolute;
+          width: $bubble-size;
+          height: $bubble-size;
+          border-radius: 100%;
+          background: rgba(255, 255, 255, 0.15);
+          box-shadow: inset 14px -14px 14px rgba(194, 194, 194, 17%),
+            inset -14px 14px 14px rgba(255, 255, 255, 17%),
+            0px 0px 25px rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, .3);
+          opacity: .4;
+          z-index: 1;
+          animation: floating 20s ease-in-out;
+          animation-iteration-count: infinite;
+
+          &.notransition {
+            animation: none !important;
+          }
+
+          &.slidingout {
+            animation: slidingout .5s !important;
+          }
+
+          &:nth-child(1) {
+            right: 30vh;
+            bottom: 0;
+          }
+
+          &:nth-child(2) {
+            right: 0;
+            bottom: 60%;
+            width: $bubble-size / 2;
+            height: $bubble-size / 2;
+            transform: translateY(50%);
+            animation-delay: 3s;
+          }
+        }
+      }
+    }
+
+    &.aboutme {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      display: grid;
+      place-content: center;
+      grid-template-columns: 70vw;
+
+      @include md {
+        min-height: auto;
+      }
+
+      @include xl {
+        grid-template-columns: 80vw;
+      }
+
+      @include lg {
+        grid-template-columns: 85vw;
+      }
+
+      >div {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 2em;
+
+        @include md {
+          grid-template-columns: 1fr;
+        }
+
+        h2 {
+          font-size: 3em;
+          text-transform: uppercase;
+        }
+
+        p {
+          text-align: justify;
+        }
+
+        img {
+          height: 90vh;
+          max-height: 500px;
+
+          @include xl {
+            height: 50vh;
+          }
+
+          @include md {
+            display: none;
+          }
+        }
+
+        .services-list {
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+
+          .service {
+            background-color: rgba(255, 255, 255, .13);
+            backdrop-filter: blur(10px);
+            border-color: 1px solid rgba(255, 255, 255, .3);
+            padding: 1em 2em;
+            border-radius: 7px;
+
+            margin-left: .5em;
+            margin-right: .5em;
+            margin-bottom: 1em;
+
+
+            svg {
+              height: 1.3em;
+              vertical-align: middle;
+              width: auto;
+              margin-right: .5em;
+            }
+          }
+        }
+      }
+
+    }
+
+    &#projects {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      display: grid;
+      place-content: center;
+      grid-template-columns: 70vw;
+
+      @include xl {
+        grid-template-columns: 80vw;
+      }
+
+      h2 {
+        font-size: 3em;
+        text-transform: uppercase;
+      }
+
+
+      .project-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: masonry;
+        gap: 1em;
+
+        @include md {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include lg {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .project {
+
+          >a {
+            display: block;
+            margin: 0;
+            position: relative;
+
+            .overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+              display: grid;
+              align-content: end;
+              justify-content: center;
+              padding: 1em;
+              opacity: 0;
+              transition: opacity .3s;
+              cursor: pointer;
+            }
+
+            &:hover {
+              .overlay {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+
+
+      }
+    }
+
+
+
+  }
+
+  &.project {
+
+    section {
+
+      min-height: unset;
+      display: grid;
+      grid-template-columns: 75%;
+      justify-content: center;
+
+      &#project-header {
+        position: relative;
+        padding-top: 80px;
+        min-height: 75vh;
+        place-content: center;
+        z-index: 3;
+
+        div {
+          place-self: center;
+
+          h1 {
+            font-size: 5vw;
+            line-height: 6vw;
+            font-weight: normal;
+            margin: 0;
+          }
+
+          h2 {
+            margin-bottom: 3em;
+          }
+        }
+
+        p {
+          text-align: justify;
+        }
+
+
+
+        @include md {
+          place-self: unset;
+          padding-top: 6em;
+
+          h1 {
+            font-size: 45px;
+            line-height: 55px;
+            // max-width: 380px;
+
+            strong {
+              display: unset;
+            }
+          }
+        }
+      }
+
+      &#images {
+        margin-bottom: 10em;
+
+        .images-list {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: masonry;
+          gap: 1em;
+
+          @include md {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          @include lg {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          img {
+            width: 100%;
+          }
+
+        }
+
+
+      }
+    }
+  }
+
+  &.notfound {
+
+    section {
+      &#home {
+        >div:nth-child(1) {
+          a {
+            svg {
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+  }
 
   footer {
     display: grid;
@@ -122,6 +553,7 @@ main {
 
     > :nth-child(1) {
       place-self: start;
+
       svg {
         height: 1.3em;
       }
@@ -130,6 +562,7 @@ main {
 
     > :nth-child(2) {
       place-self: end;
+
       svg {
         height: 1.3em;
         fill: red !important;
@@ -144,311 +577,7 @@ main {
   }
 }
 
-section {
 
-  width: 100vw;
-  min-height: 100vh;
-  padding: 0 100px;
-  overflow: hidden;
-
-
-  overflow-x: auto;
-
-
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-
-  @include md {
-    padding: 0 50px;
-  }
-
-  &#home {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    @include md {
-      grid-template-columns: 1fr;
-    }
-
-    >div:nth-child(1) {
-
-      place-self: center;
-      z-index: 3;
-
-      h1 {
-        font-size: 5vw;
-        line-height: 6vw;
-        font-weight: normal;
-        margin: 0;
-        margin-bottom: 1em;
-
-        strong {
-          display: block;
-          font-weight: normal;
-          white-space: nowrap;
-        }
-      }
-
-      @include md {
-        place-self: unset;
-        padding-top: 6em;
-
-        h1 {
-          font-size: 45px;
-          line-height: 55px;
-          // max-width: 380px;
-
-          strong {
-            display: unset;
-          }
-        }
-      }
-
-      button {
-        border: 0;
-        padding: .2em 1.2em;
-        margin-top: 1em;
-        font-size: 36px;
-        color: white;
-        text-transform: capitalize;
-        cursor: pointer;
-        background: rgba(212, 184, 173, 0.55);
-        box-shadow: inset 11.7px -11.7px 11.7px rgba(161, 140, 131, 0.143), inset -11.7px 11.7px 11.7px rgba(255, 255, 255, 0.143);
-        backdrop-filter: blur(67.626px);
-        border-radius: 15px;
-        transition: background .2s;
-
-        &:hover {
-          background: rgba(212, 184, 173, .8);
-        }
-
-        @include sm {
-          display: none;
-        }
-      }
-    }
-
-    >div:nth-child(2) {
-      position: relative;
-
-      @include sm {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        display: grid;
-        place-content: center;
-      }
-
-      .jade {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        max-height: 60vh;
-        z-index: 2;
-        filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.5));
-
-        @include md {
-          left: 0;
-          right: 0;
-          margin-left: auto;
-          max-width: 90vw;
-          // height: auto;
-        }
-      }
-
-      .bubble {
-        position: absolute;
-        width: $bubble-size;
-        height: $bubble-size;
-        border-radius: 100%;
-        background: rgba(255, 255, 255, 0.15);
-        box-shadow: inset 14px -14px 14px rgba(194, 194, 194, 17%),
-          inset -14px 14px 14px rgba(255, 255, 255, 17%),
-          0px 0px 25px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, .3);
-        opacity: .4;
-        z-index: 1;
-        animation: floating 20s ease-in-out;
-        animation-iteration-count: infinite;
-
-        &.notransition {
-          animation: none !important;
-        }
-
-        &.slidingout {
-          animation: slidingout .5s !important;
-        }
-
-        &:nth-child(1) {
-          right: 30vh;
-          bottom: 0;
-        }
-
-        &:nth-child(2) {
-          right: 0;
-          bottom: 60%;
-          width: $bubble-size / 2;
-          height: $bubble-size / 2;
-          transform: translateY(50%);
-          animation-delay: 3s;
-        }
-      }
-    }
-  }
-
-  &.aboutme {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    display: grid;
-    place-content: center;
-    grid-template-columns: 70vw;
-
-    @include md {
-      min-height: auto;
-    }
-
-    @include xl {
-      grid-template-columns: 80vw;
-    }
-
-    @include lg {
-      grid-template-columns: 85vw;
-    }
-
-    >div {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 2em;
-
-      @include md {
-        grid-template-columns: 1fr;
-      }
-
-      h2 {
-        font-size: 3em;
-        text-transform: uppercase;
-      }
-
-      p {
-        text-align: justify;
-      }
-
-      img {
-        height: 90vh;
-        max-height: 500px;
-
-        @include xl {
-          height: 50vh;
-        }
-
-        @include md {
-          display: none;
-        }
-      }
-
-      .services-list {
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-
-        .service {
-          background-color: rgba(255, 255, 255, .13);
-          backdrop-filter: blur(10px);
-          border-color: 1px solid rgba(255, 255, 255, .3);
-          padding: 1em 2em;
-          border-radius: 7px;
-
-          margin-left: .5em;
-          margin-right: .5em;
-          margin-bottom: 1em;
-
-
-          svg {
-            height: 1.3em;
-            vertical-align: middle;
-            width: auto;
-            margin-right: .5em;
-          }
-        }
-      }
-    }
-
-  }
-
-  &#projects {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    display: grid;
-    place-content: center;
-    grid-template-columns: 70vw;
-
-    @include xl {
-      grid-template-columns: 80vw;
-    }
-
-    h2 {
-      font-size: 3em;
-      text-transform: uppercase;
-    }
-
-
-    .project-list {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: masonry;
-      gap: 1em;
-
-      @include md {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @include lg {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .project {
-
-        > a {
-          display: block;
-          margin: 0;
-          position: relative;
-
-          .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-            display: grid;
-            align-content: end;
-            justify-content: center;
-            padding: 1em;
-            opacity: 0;
-            transition: opacity .3s;
-            cursor: pointer;
-          }
-
-          &:hover {
-            .overlay {
-              opacity: 1;
-            }
-          }
-        }
-      }
-
-      img {
-        width: 100%;
-      }
-
-
-    }
-  }
-}
 
 @keyframes floating {
   0% {
