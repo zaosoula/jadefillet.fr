@@ -47,11 +47,7 @@ app.get("/", function (req, res) {
 app.get("/project/:id", function (req, res) {
   const project = req.params.id;
   const _ = i18n.translateMiddleware(req, res);
-  const _p = (key)=>{
-    let path = `projects_page.${project}.${key??''}`;
-    if(path.endsWith('.')) path=path.slice(0, -1);
-    return _(path) 
-  };
+  const _p = i18n.createNamespace(_, `projects_page.${project}`);
 
   if(_p()) {
     res.render("project", {

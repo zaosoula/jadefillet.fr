@@ -30,20 +30,23 @@ class i18n {
 
   translate(key,langName) {
     if(key == '_currentLang') return langName;
-      let root = this.config.lang[langName]
-      let translation = null;
-      try {
-        translation = key.split('.').reduce((parent,subPath, deepness)=>{
-          if(deepness==1) return root?.[parent]?.[subPath];
-          return parent?.[subPath];
-        })
-      } catch (error) {
-        console.log(error);
-      } 
+    
+    if(key.endsWith('.')) key=key.slice(0, -1);
+
+    let root = this.config.lang[langName]
+    let translation = null;
+    try {
+      translation = key.split('.').reduce((parent,subPath, deepness)=>{
+        if(deepness==1) return root?.[parent]?.[subPath];
+        return parent?.[subPath];
+      })
+    } catch (error) {
+      console.log(error);
+    } 
 
 
-      if((translation===null || translation===undefined)  && langName != this.config.defaultLang) return this.translate(key, this.config.defaultLang);
-      return translation || '';
+    if((translation===null || translation===undefined)  && langName != this.config.defaultLang) return this.translate(key, this.config.defaultLang);
+    return translation || '';
   }
 
   translateMiddleware(req, res) {
@@ -69,6 +72,13 @@ class i18n {
     return (key) => {
       return this.translate(key, langName);
     }
+  }
+
+  createNamespace(translateFunction, prefix) {
+    return (key)=>{
+      const path = `${prefix}.${key??''}`;
+      return translateFunction(path)
+    };
   }
 
 }
