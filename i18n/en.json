@@ -35,7 +35,7 @@
     "social": "Connect with me",
     "socials": [{
       "icon": "#instagram",
-      "url": "Community Management",
+      "url": "https://www.instagram.com/jademakeupsfx/",
       "label": "Instagram"
     },
     {
@@ -57,7 +57,7 @@
       }
     }, 
     {
-      "url": "",
+      "slug": "",
       "title": "Atypical",
       "image": {
         "url": "/assets/images/projects/436.jpg",
@@ -65,7 +65,7 @@
       }
     }, 
     {
-      "url": "",
+      "slug": "abbe-pierre",
       "title": "Abbé Pierre",
       "image": {
         "url": "/assets/images/projects/19250225.jpg",
@@ -73,7 +73,7 @@
       }
     }, 
     {
-      "url": "",
+      "slug": "omega",
       "title": "Projet Omega",
       "image": {
         "url": "/assets/images/projects/Capture d’écran 2020-11-16 092025.jpg",
@@ -81,7 +81,7 @@
       }
     }, 
     {
-      "url": "",
+      "slug": "aerocap",
       "title": "AEROCAP",
       "image": {
         "url": "/assets/images/projects/Carte de visite mockup.jpg",
@@ -89,7 +89,7 @@
       }
     }, 
     {
-      "url": "",
+      "slug": "hectare",
       "title": "Hectare",
       "image": {
         "url": "/assets/images/projects/mockup brochure.jpg",
@@ -97,7 +97,7 @@
       }
     }, 
     {
-      "url": "",
+      "slug": "livre-monstre",
       "title": "Livre monstre",
       "image": {
         "url": "/assets/images/projects/mockup.jpg",
@@ -105,7 +105,7 @@
       }
     }, 
     {
-      "url": "",
+      "slug": "simpsons-7-familles",
       "title": "Simpsons 7 Familles",
       "image": {
         "url": "/assets/images/projects/packaging simpson.jpg",
@@ -113,7 +113,7 @@
       }
     }, 
     {
-      "url": "",
+      "slug": "album",
       "title": "Pochette 1",
       "image": {
         "url": "/assets/images/projects/Pochette 1.jpg",
@@ -121,8 +121,8 @@
       }
     }, 
     {
-      "url": "",
-      "title": "pochette d'album laulau",
+      "slug": "album-2",
+      "title": "pochette d'album laurine",
       "image": {
         "url": "/assets/images/projects/pochette d'album laulau.jpg",
         "alt": ""
@@ -133,7 +133,7 @@
   "projects_page": {
     "michel-pastoureau": {
       "title": "Michel Pastourau",
-      "subtitle": "Design de livre",
+      "subtitle": "Book design",
       "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae malesuada orci, sit amet tristique nisi. Vivamus in nulla nibh. Vivamus non nisi neque. Phasellus mollis in mi ut interdum. Phasellus sit amet massa ac augue scelerisque dignissim. Nam mollis non velit quis venenatis. Nullam sit amet est a nisi faucibus mattis eget nec leo. Suspendisse ut nunc laoreet, blandit dui sed, facilisis turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In auctor urna at mi convallis, sed malesuada massa eleifend. Vestibulum eros ipsum, commodo nec lacus vel, imperdiet lacinia ipsum. Vivamus sit amet sem viverra, efficitur magna et, faucibus lacus. Praesent et dui erat. Pellentesque in magna eget nisl dignissim rutrum fermentum non urna. Praesent aliquam venenatis imperdiet. Nunc sollicitudin tempus metus, id porttitor purus vehicula at. Curabitur lacinia justo lectus, eu venenatis dolor semper non. Sed commodo orci nec purus egestas, quis venenatis erat ullamcorper. Quisque erat felis, egestas quis est faucibus, pulvinar suscipit ex. Morbi consequat, lorem eget mattis eleifend, elit justo volutpat mi, accumsan tempor elit leo in eros. Vivamus facilisis odio eu arcu placerat, sed lobortis erat vestibulum. Phasellus eu laoreet tortor. Praesent condimentum vulputate quam, eu feugiat metus interdum vitae. Curabitur bibendum rutrum nunc sit amet maximus.",
       "images": [
         {

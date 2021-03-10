@@ -24,8 +24,27 @@
       },
       {
         "icon": "#shape",
-        "label": "Graphism"
+        "label": "Graphisme"
       }
-    ]
+    ],
+    "social": "Retrouvez-moi sur"
+  },
+  "projects": {
+    "nav": "Projets",
+    "title": "Projets"
+  },
+  "projects_page": {
+    "michel-pastoureau": {
+      "title": "Michel Pastourau",
+      "subtitle": "Design de livre",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae malesuada orci, sit amet tristique nisi. Vivamus in nulla nibh. Vivamus non nisi neque. Phasellus mollis in mi ut interdum. Phasellus sit amet massa ac augue scelerisque dignissim. Nam mollis non velit quis venenatis. Nullam sit amet est a nisi faucibus mattis eget nec leo. Suspendisse ut nunc laoreet, blandit dui sed, facilisis turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In auctor urna at mi convallis, sed malesuada massa eleifend. Vestibulum eros ipsum, commodo nec lacus vel, imperdiet lacinia ipsum. Vivamus sit amet sem viverra, efficitur magna et, faucibus lacus. Praesent et dui erat. Pellentesque in magna eget nisl dignissim rutrum fermentum non urna. Praesent aliquam venenatis imperdiet. Nunc sollicitudin tempus metus, id porttitor purus vehicula at. Curabitur lacinia justo lectus, eu venenatis dolor semper non. Sed commodo orci nec purus egestas, quis venenatis erat ullamcorper. Quisque erat felis, egestas quis est faucibus, pulvinar suscipit ex. Morbi consequat, lorem eget mattis eleifend, elit justo volutpat mi, accumsan tempor elit leo in eros. Vivamus facilisis odio eu arcu placerat, sed lobortis erat vestibulum. Phasellus eu laoreet tortor. Praesent condimentum vulputate quam, eu feugiat metus interdum vitae. Curabitur bibendum rutrum nunc sit amet maximus."
+    }
+  },
+  
+  "404": {
+    "title": "La page est introuvable.",
+    "link": {
+      "label": "Page d'accueil"
+    }
   }
 }
