@@ -247,6 +247,7 @@ main section#home > div:nth-child(1) button:hover {
 
 main section#home > div:nth-child(2) {
   position: relative;
+  pointer-events: auto !important;
 }
 
 @media (max-width: 544px) {
@@ -308,6 +309,11 @@ main section#home > div:nth-child(2) .bubble.notransition {
 main section#home > div:nth-child(2) .bubble.slidingout {
   -webkit-animation: slidingout .5s !important;
           animation: slidingout .5s !important;
+}
+
+main section#home > div:nth-child(2) .bubble.exploding {
+  -webkit-animation: exploding .5s !important;
+          animation: exploding .5s !important;
 }
 
 main section#home > div:nth-child(2) .bubble:nth-child(1) {
@@ -485,7 +491,7 @@ main section#projects h2 {
   text-transform: uppercase;
 }
 
-main section#projects .project-list {
+main section#projects .project-list, main section#projects .makeups-list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -496,26 +502,26 @@ main section#projects .project-list {
 }
 
 @media (max-width: 768px) {
-  main section#projects .project-list {
+  main section#projects .project-list, main section#projects .makeups-list {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 1012px) {
-  main section#projects .project-list {
+  main section#projects .project-list, main section#projects .makeups-list {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
-main section#projects .project-list .project > a {
+main section#projects .project-list .project > a, main section#projects .project-list .makeup > a, main section#projects .makeups-list .project > a, main section#projects .makeups-list .makeup > a {
   display: block;
   margin: 0;
   position: relative;
 }
 
-main section#projects .project-list .project > a .overlay {
+main section#projects .project-list .project > a .overlay, main section#projects .project-list .makeup > a .overlay, main section#projects .makeups-list .project > a .overlay, main section#projects .makeups-list .makeup > a .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -537,11 +543,11 @@ main section#projects .project-list .project > a .overlay {
   cursor: pointer;
 }
 
-main section#projects .project-list .project > a:hover .overlay {
+main section#projects .project-list .project > a:hover .overlay, main section#projects .project-list .makeup > a:hover .overlay, main section#projects .makeups-list .project > a:hover .overlay, main section#projects .makeups-list .makeup > a:hover .overlay {
   opacity: 1;
 }
 
-main section#projects .project-list img {
+main section#projects .project-list img, main section#projects .makeups-list img {
   width: 100%;
 }
 
@@ -807,6 +813,48 @@ main footer a {
   100% {
     -webkit-transform: translate(0, -100vh);
             transform: translate(0, -100vh);
+  }
+}
+
+@-webkit-keyframes exploding {
+  30% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  70% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 0;
+  }
+}
+
+@keyframes exploding {
+  30% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  70% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

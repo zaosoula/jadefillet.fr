@@ -10,7 +10,7 @@
     const bubbles = scene.querySelectorAll('.bubble');
   
     let supportDeviceMotion = false,
-      supportMousemove = false;
+        supportMousemove = false;
   
     window.addEventListener("devicemotion", function (event) {
       if (event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma) {
@@ -42,6 +42,17 @@
       }
     }
 
+    bubbles.forEach((bubble)=>{
+      bubble.addEventListener('click', ()=>{
+        bubble.classList.remove('notransition');
+        bubble.classList.add('exploding');
+        bubble.addEventListener("animationend", function () {
+          bubble.style.opacity = 0;
+        }, {
+          once: true
+        });
+      })
+    })
 
     document.querySelectorAll('[data-target="#aboutme"]').forEach((link) => {
       link.addEventListener('click', () => {

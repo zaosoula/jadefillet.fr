@@ -33,6 +33,10 @@
     "nav": "Projets",
     "title": "Projets"
   },
+  "makeups": {
+    "nav": "Maquillages",
+    "title": "Maquillages"
+  },
   "projects_page": {
     "michel-pastoureau": {
       "title": "Michel Pastourau",

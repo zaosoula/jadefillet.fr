@@ -130,6 +130,24 @@
     }
   ]
   },
+  "makeups": {
+    "nav": "Makeups",
+    "title": "Makeups",
+    "items": [
+      "/assets/images/makeups/0000.jpg",
+      "/assets/images/makeups/0001.jpg",
+      "/assets/images/makeups/0002.jpg",
+      "/assets/images/makeups/0003.jpg",
+      "/assets/images/makeups/0004.jpg",
+      "/assets/images/makeups/0005.jpg",
+      "/assets/images/makeups/0006.jpg",
+      "/assets/images/makeups/0007.jpg",
+      "/assets/images/makeups/0008.jpg",
+      "/assets/images/makeups/0009.jpg",
+      "/assets/images/makeups/0010.jpg",
+      "/assets/images/makeups/0011.jpg"
+    ]
+  },
   "projects_page": {
     "michel-pastoureau": {
       "title": "Michel Pastourau",

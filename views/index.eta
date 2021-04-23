@@ -80,6 +80,18 @@
         </div>
       </div>
     </section>
+    <section id="projects">
+      <div>
+        <h2>{{ _('makeups.title') }}</h2>
+        <div class="makeups-list grid--masonry">
+          {{= _('makeups.items').forEach(function (i){ }}
+          <div class="makeup">
+              <img src="{{ i }}" loading="lazy">
+          </div>
+          {{= }) }}
+        </div>
+      </div>
+    </section>
 
     {{% includeFile("partials/footer", { _:_}) }}
   </main>

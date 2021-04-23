@@ -242,6 +242,7 @@ main {
 
       >div:nth-child(2) {
         position: relative;
+        pointer-events: auto !important;
 
         @include sm {
           position: absolute;
@@ -292,6 +293,10 @@ main {
 
           &.slidingout {
             animation: slidingout .5s !important;
+          }
+          
+          &.exploding {
+            animation: exploding .5s !important;
           }
 
           &:nth-child(1) {
@@ -428,7 +433,7 @@ main {
       }
 
 
-      .project-list {
+      .project-list, .makeups-list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: masonry;
@@ -442,7 +447,7 @@ main {
           grid-template-columns: repeat(2, 1fr);
         }
 
-        .project {
+        .project, .makeup {
 
           >a {
             display: block;
@@ -688,5 +693,25 @@ main {
 @keyframes slidingout {
   100% {
     transform: translate(00, -100vh);
+  }
+}
+
+@keyframes exploding {
+  30% {
+    transform: scale(.6);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  70% {
+    transform: scale(.8);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(5);
+    opacity: 0;
   }
 }
