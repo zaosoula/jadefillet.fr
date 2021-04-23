@@ -828,7 +828,7 @@ main footer a {
   70% {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
-    opacity: 1;
+    opacity: .4;
   }
   100% {
     -webkit-transform: scale(5);
@@ -849,7 +849,7 @@ main footer a {
   70% {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
-    opacity: 1;
+    opacity: .4;
   }
   100% {
     -webkit-transform: scale(5);
