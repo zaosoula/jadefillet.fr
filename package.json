@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "echo No test"
   },
   "dependencies": {
     "cookie-parser": "1.4.5",
