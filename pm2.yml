@@ -1,5 +1,5 @@
 apps:
-  - script: ./index
+  - script: ./index.js
     name: 'jadefillet.fr'
     watch: true
     env:
