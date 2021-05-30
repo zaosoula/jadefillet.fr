@@ -1,10 +1,11 @@
 (require('dotenv')).config();
 const port = process.env.PORT;
-const express = require("express")
-const app = express()
-const eta = require("eta")
+const express = require("express");
+const path = require("path");
+const app = express();
+const eta = require("eta");
 const cookieParser = require('cookie-parser');
-const I18N = require('./i18n')
+const I18N = require('./i18n');
 eta.configure({
   // cache: true,
   tags: ['{{', '}}'],
@@ -27,7 +28,7 @@ app.engine("eta", eta.renderFile)
 app.set("view engine", "eta")
 app.set("views", "./views")
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 
 app.use((req, res, next) => {

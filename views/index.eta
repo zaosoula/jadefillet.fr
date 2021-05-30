@@ -7,6 +7,7 @@
   <title>Jade Fillet | Designer</title>
   <link href="/assets/css/sanitize.css" rel="stylesheet" />
   <link href="/assets/css/main.css" rel="stylesheet" />
+  {{% includeFile("partials/seo") }}
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
